@@ -27,7 +27,7 @@ const SpotifyLayout = ({ chieldren, selectedMovie, setSelectedMovie, myMovieList
         <div className="flex flex-col w-screen h-screen kanit-light text-white">
             <div className="flex flex-col w-full h-full overflow-auto">
                 <div className="flex flex-col w-full h-full justify-center items-center ">
-                    <div className="flex flex-row w-full h-[90%] bg-red-500 overflow-auto custom-scrollbar">
+                    <div className="flex flex-row w-full h-[90%] bg-black overflow-auto custom-scrollbar">
                         <div className="flex flex-col h-full w-[0%] lg:w-[20%] bg-black py-2 px-1 gap-2 overflow-auto custom-scrollbar" >
                             <div className="flex flex-col bg-red500 w-full h-[20%] bg-zinc-900 rounded-lg  font-medium px-5 py-3 gap-4 transition-all overflow-auto custom-scrollbar">
                                 <div className="flex flex-row gap-3 flex-1 justify-start items-center "><House /><Link to={"/"}><span className="text-gray-400 hover:text-white ">หน้าหลัก</span></Link></div>
@@ -104,7 +104,7 @@ const SpotifyLayout = ({ chieldren, selectedMovie, setSelectedMovie, myMovieList
 
                                                     }} className="text-white" />
                                                 </div>
-                                                <span className="text-6xl tracking-tighter font-bold ">FMHF</span>
+                                                <span className="text-6xl tracking-tighter font-bold ">FNSM</span>
                                             </div>
                                             <div className="flex-row items-center gap-2 hidden lg:flex">
                                                 <div className="flex flex-row px-2 py-1 bg-zinc-700 rounded-xl"><span>สํารวจ Premium</span></div>
