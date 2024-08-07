@@ -5,7 +5,7 @@ import { TableCaption, TableHeader, TableRow, TableHead, TableBody, TableCell, T
 type props = {
     movieData: Movie[]
 }
-const MovieListTable = ({ movieData }: props) => {
+const MovieListTable = ({ }: props) => {
     return (
         <Table>
             <TableCaption>A list of your recent invoices.</TableCaption>

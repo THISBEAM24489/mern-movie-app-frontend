@@ -1,7 +1,6 @@
 import { useCreateMovie, useGetMovieByID, useUpdateMovie } from "@/api/movieApi";
 import MovieForm, { MovieFormData } from "@/forms/movieForm";
 import { Movie } from "@/types";
-import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 const MovieEditPage = () => {

@@ -1,4 +1,3 @@
-import React from "react";
 import { Movie } from "@/types";
 import ReactPlayer from "react-player";
 

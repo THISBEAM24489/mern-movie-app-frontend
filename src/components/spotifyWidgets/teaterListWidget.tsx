@@ -1,5 +1,5 @@
 import { formatDate } from "@/middlewere/uti";
-import { Movie, ShowTime, SubTheatre } from "@/types";
+import { Movie, SubTheatre } from "@/types";
 import { MapPinned } from "lucide-react";
 import SubTheatreWidget from "./subTheatreWidget";
 

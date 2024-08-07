@@ -18,7 +18,7 @@ const SeatSelectWidget = ({ showTime, onSeatSelect, selectedSeat, bookingData }:
 
     return (
         <div className="grid grid-cols-12 gap-4 justify-center w-full items-center">
-            {seatArr.map((seat, index) => (
+            {seatArr.map((_seat, index) => (
                 <div
                     key={index}
                     className="flex justify-center items-center"

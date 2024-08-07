@@ -1,6 +1,6 @@
 import { formatDate } from "@/middlewere/uti";
 import { Movie } from "@/types";
-import { CirclePlay, Play, Repeat2, Shuffle, SkipBack, SkipForward, Volume2 } from "lucide-react";
+import { Play, Repeat2, Shuffle, SkipBack, SkipForward, Volume2 } from "lucide-react";
 
 
 type Props = {

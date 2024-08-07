@@ -12,10 +12,8 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Movie, User } from "@/types";
+import { Movie } from "@/types";
 import { useEffect } from "react";
-import { DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { Dialog } from "@radix-ui/react-dialog";
 
 const formSchema = z.object({
     _id: z.string(),

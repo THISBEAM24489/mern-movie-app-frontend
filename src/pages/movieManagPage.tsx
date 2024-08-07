@@ -1,8 +1,6 @@
 import { useGetMovie } from "@/api/movieApi";
 import MovieManageCard from "@/components/movieManageCard";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Key } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const MovieManagePage = () => {

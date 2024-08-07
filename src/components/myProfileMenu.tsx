@@ -2,7 +2,7 @@
 import { CircleUserRound } from "lucide-react";
 import { Button } from "./ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./ui/dropdown-menu";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Separator } from "./ui/separator";
 import { useAuth0 } from "@auth0/auth0-react";
 

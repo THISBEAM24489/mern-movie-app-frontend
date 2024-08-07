@@ -7,7 +7,7 @@ type Props = {
     isBooked: boolean;
 };
 
-const SeatSelecter = ({ index, name, selectedSeat, isBooked }: Props) => {
+const SeatSelecter = ({ index, selectedSeat, isBooked }: Props) => {
     if (selectedSeat.includes(index)) {
         return (
             <CircleCheck

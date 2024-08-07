@@ -1,4 +1,3 @@
-import SubtheatreCard from "@/components/subTheatreCard";
 import { ShowTime, SubTheatre } from "@/types";
 import { useMutation, useQuery } from "react-query";
 

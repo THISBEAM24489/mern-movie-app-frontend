@@ -15,7 +15,7 @@ type Props = {
     setSelectedMovie: (movie: Movie) => void
 }
 
-const SpotifyLayout = ({ chieldren, movies, selectedMovie, setSelectedMovie, myMovieList, setMymovieList }: Props) => {
+const SpotifyLayout = ({ chieldren, selectedMovie, setSelectedMovie, myMovieList, setMymovieList }: Props) => {
     const { theatreData } = useGetSubTheatreByMovieID(selectedMovie._id);
     const navigate = useNavigate();
     const handleAddItem = (movieId: string) => {

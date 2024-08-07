@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useForm, Controller } from "react-hook-form";
 import { z } from "zod";
@@ -74,7 +72,7 @@ const ShowTimeForm = ({
                 <FormField
                     control={form.control}
                     name="date"
-                    render={({ field }) => (
+                    render={() => (
                         <FormItem className="kanit-light flex flex-row gap-2 justify-start items-center">
                             <FormLabel><span>วันที่และเวลา</span></FormLabel>
                             <FormControl>

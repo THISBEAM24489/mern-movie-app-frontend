@@ -1,7 +1,6 @@
 import { useCreateMovie } from "@/api/movieApi";
 import MovieForm, { MovieFormData } from "@/forms/movieForm";
 import { Movie } from "@/types";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const MovieCreatePage = () => {

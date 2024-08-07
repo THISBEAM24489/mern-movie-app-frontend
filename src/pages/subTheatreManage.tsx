@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useCreateSubTheatre, useGetSubTheatre, useUpdateSubTheatre } from "@/api/theatreApi";
 import SubTheatreManageList from "@/components/subTheatreManageList";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { SubTheatre } from "@/types";
 import { useGetMovie } from "@/api/movieApi";
 
@@ -27,23 +26,23 @@ const SubTeatreManagePage = () => {
 
     };
 
-    const handleCreateNewTheatre = () => {
-        const newTheatre: SubTheatre = {
-            name: 'New SubTheatre',
-            movie: {
-                name: "",
-                _id: "",
-                description: "",
-                releaseDate: new Date,
-                genre: [],
-                image: "",
-                tailer: ""
-            },
-            showTime: []
-        };
+    // const handleCreateNewTheatre = () => {
+    //     const newTheatre: SubTheatre = {
+    //         name: 'New SubTheatre',
+    //         movie: {
+    //             name: "",
+    //             _id: "",
+    //             description: "",
+    //             releaseDate: new Date,
+    //             genre: [],
+    //             image: "",
+    //             tailer: ""
+    //         },
+    //         showTime: []
+    //     };
 
-        setTheatres([newTheatre, ...theatres]);
-    };
+    //     setTheatres([newTheatre, ...theatres]);
+    // };
 
     const handleSaveToApi = async (index: number) => {
         if (index >= 0 && index < theatres.length) {
