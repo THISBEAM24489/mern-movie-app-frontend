@@ -10,9 +10,11 @@ import { useEffect, useState } from "react";
 import { Movie } from "./types";
 import BanerWidget from "./components/spotifyWidgets/banerWidget";
 import SpotifyMovie from "./components/spotifyWidgets/spotifyMovieTailerWidget";
+import ScrollToTop from "./components/react/scrollToTop";
+import { spawn } from "child_process";
 
 const MyAppRouter = () => {
-    const { movieData } = useGetMovie()
+    const { movieData, isLoading } = useGetMovie()
     const [movies, setMovies] = useState<Movie[]>(movieData ?? []);
     const [selectedMovie, setSelectedMovie] = useState<Movie>();
 
@@ -26,9 +28,12 @@ const MyAppRouter = () => {
     }, [movieData]);
 
 
+
+
     return (
         <Routes>
-            <Route path="/movie/:id" element={<SpotifyLayout myMovieList={myMovieList ?? []} setMymovieList={setMyMovieList} setSelectedMovie={setSelectedMovie} chieldren={<SpotifyMovie movie={selectedMovie ?? {
+
+            <Route path="/movie/:id" element={<SpotifyLayout myMovieList={myMovieList ?? []} setMymovieList={setMyMovieList} setSelectedMovie={setSelectedMovie} chieldren={<SpotifyMovie movies={movies ?? []} myMovieList={myMovieList ?? []} setMydMovieList={setMyMovieList} setSelectedMovie={setSelectedMovie} movie={selectedMovie ?? {
                 _id: "",
                 name: "ไม่มีชื่อเรื่อง",
                 description: "",

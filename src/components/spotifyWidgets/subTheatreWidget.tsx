@@ -15,7 +15,7 @@ const SubTheatreWidget = ({ subTheatre }: Props) => {
             <Captions size={18} />
             <span>TH</span>
         </div>
-        <div className="grid grid-cols-4 w-full gap-2 text-black p-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full gap-2 text-black p-2">
             {subTheatre?.showTime.map((theatre, index) => (
                 <div key={index} className="flex p-1 bg-yellow-500 hover:cursor-pointer hover:bg-yellow-300  justify-center items-center rounded-md">
                     <span className=" font-medium text-base">   {formatDateToTime(theatre.time.toString())}</span>

@@ -10,8 +10,8 @@ type Props = {
 
 const TheatreWidget = ({ subTheatre, movie }: Props) => {
     return (
-        <div className="flex flex-col w-full h-full justify-center items-center">
-            <div className="flex flex-col w-full h-60 relative">
+        <div className="flex flex-col w-full h-full">
+            <div className="flex flex-col w-full h-80 md:h-[700px] lg:h-60 relative">
                 {movie?.image && (
                     <div className="w-full h-full bg-black relative">
                         <img
@@ -21,9 +21,9 @@ const TheatreWidget = ({ subTheatre, movie }: Props) => {
                         />
                     </div>
                 )}
-                <div className="flex flex-row w-full absolute  gap-3 inset-0 p-3 ">
-                    <img className="w-auto h-full" src={movie?.image} alt="" />
-                    <div className="flex flex-col justify-between items-center" >
+                <div className="flex flex-col md:flex-col lg:flex-row w-full absolute  gap-3 inset-0 p-3 ">
+                    <img className="w-full h-auto lg:h-full lg:w-auto" src={movie?.image} alt="" />
+                    <div className="flex flex-col  justify-between items-center" >
                         <div className="flex flex-col">
                             <span className=" font-medium">{movie?.name}</span>
                             <span className=" text-yellow-500 text-sm ">{formatDate((movie?.releaseDate ?? new Date()).toString())}</span>

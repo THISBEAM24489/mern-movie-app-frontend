@@ -12,7 +12,7 @@ const MainSpotifyPage = ({ movies, setSelectedMovie, myMovieList, setMydMovieLis
     const navogate = useNavigate();
     return (
         <div className="flex flex-col w-full h-full gap-8">
-            <div className="grid grid-cols-2 gap-2 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 w-full">
                 {movies.slice(0, 6).map((movie, index) => (
                     <div onClick={() => {
                         setSelectedMovie(movie);
@@ -23,6 +23,7 @@ const MainSpotifyPage = ({ movies, setSelectedMovie, myMovieList, setMydMovieLis
                 ))}
             </div>
             < BanerWidget setMymovieList={setMydMovieList} myMovieList={myMovieList} setSelectedMovie={setSelectedMovie} subTitle={"มิกซ์ยอดนิยมสําหรับคุณ"} title={"อ้างอิงจากการดูล่าสุดของคุณ"} movies={movies.slice(0, 4)}></BanerWidget>
+            < BanerWidget setMymovieList={setMydMovieList} myMovieList={myMovieList} setSelectedMovie={setSelectedMovie} subTitle={"รายการล่าสุด"} title={"อ้างอิงจากการดูล่าสุดของคุณ"} movies={movies.slice(0, 4)}></BanerWidget>
         </div>
     );
 }

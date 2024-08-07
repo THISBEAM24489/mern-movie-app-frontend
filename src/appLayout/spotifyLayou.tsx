@@ -28,7 +28,7 @@ const SpotifyLayout = ({ chieldren, selectedMovie, setSelectedMovie, myMovieList
             <div className="flex flex-col w-full h-full overflow-auto">
                 <div className="flex flex-col w-full h-full justify-center items-center ">
                     <div className="flex flex-row w-full h-[90%] bg-red-500 overflow-auto custom-scrollbar">
-                        <div className="flex flex-col h-full w-[20%] bg-black py-2 px-1 gap-2 overflow-auto custom-scrollbar" >
+                        <div className="flex flex-col h-full w-[0%] lg:w-[20%] bg-black py-2 px-1 gap-2 overflow-auto custom-scrollbar" >
                             <div className="flex flex-col bg-red500 w-full h-[20%] bg-zinc-900 rounded-lg  font-medium px-5 py-3 gap-4 transition-all overflow-auto custom-scrollbar">
                                 <div className="flex flex-row gap-3 flex-1 justify-start items-center "><House /><Link to={"/"}><span className="text-gray-400 hover:text-white ">หน้าหลัก</span></Link></div>
                                 <div className="flex flex-row gap-3 flex-1 justify-start items-center"><Search /><Link to={""}><span className="text-gray-400 hover:text-white">ค้นหา</span></Link></div>
@@ -39,6 +39,7 @@ const SpotifyLayout = ({ chieldren, selectedMovie, setSelectedMovie, myMovieList
                                     <PanelsTopLeft />
                                     <div className="flex flex-row justify-between items-center text-gray-400 hover:text-white"><Link to={""}><span>คอลเลคชั่นของคุณ</span></Link><Plus /></div>
                                     <ArrowRight />
+
                                 </div>
                                 <div className="flex flex-row justify-start  items-center  font-medium">
                                     <div className="flex flex-row px-2 py-1 bg-zinc-700 rounded-xl"><span>รายการโปรด</span></div>
@@ -103,8 +104,9 @@ const SpotifyLayout = ({ chieldren, selectedMovie, setSelectedMovie, myMovieList
 
                                                     }} className="text-white" />
                                                 </div>
+                                                <span className="text-6xl tracking-tighter font-bold ">FMHF</span>
                                             </div>
-                                            <div className="flex flex-row items-center gap-2">
+                                            <div className="flex-row items-center gap-2 hidden lg:flex">
                                                 <div className="flex flex-row px-2 py-1 bg-zinc-700 rounded-xl"><span>สํารวจ Premium</span></div>
                                                 <div className="flex flex-row px-2 py-1 bg-zinc-700 rounded-xl gap-2"><Download /><span>ติดตั้งเเอป</span></div>
                                                 <div className="w-8 h-8 flex justify-center items-center rounded-full bg-zinc-900 p-2">
@@ -131,7 +133,7 @@ const SpotifyLayout = ({ chieldren, selectedMovie, setSelectedMovie, myMovieList
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-col h-full w-[25%] bg-black py-2 px-1 overflow-auto custom-scrollbar" >
+                        <div className="flex flex-col h-full lg:w-[25%] md:w-[45%] bg-black py-2 px-1 overflow-auto custom-scrollbar" >
 
                             <TeaterListWidget movie={selectedMovie} subTheatre={theatreData}></TeaterListWidget>
 
