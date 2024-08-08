@@ -13,9 +13,10 @@ type Props = {
     setMymovieList: (movie: Movie[]) => void
     selectedMovie: Movie
     setSelectedMovie: (movie: Movie) => void
+    isloadig: boolean
 }
 
-const SpotifyLayout = ({ chieldren, selectedMovie, setSelectedMovie, myMovieList, setMymovieList }: Props) => {
+const SpotifyLayout = ({ chieldren, selectedMovie, setSelectedMovie, myMovieList, setMymovieList, isloadig }: Props) => {
     const { theatreData } = useGetSubTheatreByMovieID(selectedMovie._id);
     const navigate = useNavigate();
     const handleAddItem = (movieId: string) => {
@@ -129,7 +130,10 @@ const SpotifyLayout = ({ chieldren, selectedMovie, setSelectedMovie, myMovieList
                                     </div>
                                 </div>
                                 <div className="flex flex-col w-full h-[80%] items-center overflow-auto custom-scrollbar p-4 gap-8">
-                                    {chieldren}
+                                    {isloadig ? <div className="flex flex-col w-full h-full text-4xl font-medium ">
+                                        <span>Loadig...</span>
+                                        <span>รอ api ซักครู่ครับอาจจช้านิดนึง...</span>
+                                    </div> : chieldren}
                                 </div>
                             </div>
                         </div>

@@ -12,7 +12,7 @@ import BanerWidget from "./components/spotifyWidgets/banerWidget";
 import SpotifyMovie from "./components/spotifyWidgets/spotifyMovieTailerWidget";
 
 const MyAppRouter = () => {
-    const { movieData } = useGetMovie()
+    const { movieData, isLoading } = useGetMovie()
     const [movies, setMovies] = useState<Movie[]>(movieData ?? []);
     const [selectedMovie, setSelectedMovie] = useState<Movie>();
 
@@ -31,7 +31,7 @@ const MyAppRouter = () => {
     return (
         <Routes>
 
-            <Route path="/movie/:id" element={<SpotifyLayout myMovieList={myMovieList ?? []} setMymovieList={setMyMovieList} setSelectedMovie={setSelectedMovie} chieldren={<SpotifyMovie movies={movies ?? []} myMovieList={myMovieList ?? []} setMydMovieList={setMyMovieList} setSelectedMovie={setSelectedMovie} movie={selectedMovie ?? {
+            <Route path="/movie/:id" element={<SpotifyLayout isloadig={isLoading} myMovieList={myMovieList ?? []} setMymovieList={setMyMovieList} setSelectedMovie={setSelectedMovie} chieldren={<SpotifyMovie movies={movies ?? []} myMovieList={myMovieList ?? []} setMydMovieList={setMyMovieList} setSelectedMovie={setSelectedMovie} movie={selectedMovie ?? {
                 _id: "",
                 name: "ไม่มีชื่อเรื่อง",
                 description: "",
@@ -48,7 +48,7 @@ const MyAppRouter = () => {
                 image: "",
                 tailer: ""
             }}></SpotifyLayout>}></Route>
-            <Route path="/" element={<SpotifyLayout myMovieList={myMovieList ?? []} setMymovieList={setMyMovieList} setSelectedMovie={setSelectedMovie} selectedMovie={selectedMovie ?? {
+            <Route path="/" element={<SpotifyLayout isloadig={isLoading} myMovieList={myMovieList ?? []} setMymovieList={setMyMovieList} setSelectedMovie={setSelectedMovie} selectedMovie={selectedMovie ?? {
                 _id: "",
                 name: "ไม่มีชื่อเรื่อง",
                 description: "",
@@ -57,7 +57,7 @@ const MyAppRouter = () => {
                 image: "",
                 tailer: ""
             }} chieldren={<MainSpotifyPage setMydMovieList={setMyMovieList} myMovieList={myMovieList ?? []} setSelectedMovie={setSelectedMovie} movies={movies ?? []}></MainSpotifyPage>} movies={movies ?? []}></SpotifyLayout>}></Route>
-            <Route path="/movie" element={<SpotifyLayout myMovieList={myMovieList ?? []} setMymovieList={setMyMovieList} setSelectedMovie={setSelectedMovie} selectedMovie={selectedMovie ?? {
+            <Route path="/movie" element={<SpotifyLayout isloadig={isLoading} myMovieList={myMovieList ?? []} setMymovieList={setMyMovieList} setSelectedMovie={setSelectedMovie} selectedMovie={selectedMovie ?? {
                 _id: "",
                 name: "ไม่มีชื่อเรื่อง",
                 description: "",
@@ -66,7 +66,7 @@ const MyAppRouter = () => {
                 image: "",
                 tailer: ""
             }} chieldren={<BanerWidget myMovieList={myMovieList ?? []} setMymovieList={setMyMovieList} setSelectedMovie={setSelectedMovie} title={"อ้างอิงจากการดูล่าสุดของคุณ"} subTitle={"เเนะนําสําหรับวันนี้"} movies={movies ?? []}></BanerWidget>} movies={movies ?? []}></SpotifyLayout>}></Route >
-            <Route path="/theatreManage" element={<SpotifyLayout myMovieList={myMovieList ?? []} setMymovieList={setMyMovieList} setSelectedMovie={setSelectedMovie} chieldren={<TheatreManagePage></TheatreManagePage>} movies={movies ?? []} selectedMovie={selectedMovie ?? {
+            <Route path="/theatreManage" element={<SpotifyLayout isloadig={isLoading} myMovieList={myMovieList ?? []} setMymovieList={setMyMovieList} setSelectedMovie={setSelectedMovie} chieldren={<TheatreManagePage></TheatreManagePage>} movies={movies ?? []} selectedMovie={selectedMovie ?? {
                 _id: "",
                 name: "ไม่มีชื่อเรื่อง",
                 description: "",
@@ -76,7 +76,7 @@ const MyAppRouter = () => {
                 tailer: ""
             }}></SpotifyLayout>}></Route>
 
-            <Route path="/movie/edit/:movieId" element={<SpotifyLayout myMovieList={myMovieList ?? []} setMymovieList={setMyMovieList} setSelectedMovie={setSelectedMovie} chieldren={<MovieEditPage></MovieEditPage>} movies={movies ?? []} selectedMovie={selectedMovie ?? {
+            <Route path="/movie/edit/:movieId" element={<SpotifyLayout isloadig={isLoading} myMovieList={myMovieList ?? []} setMymovieList={setMyMovieList} setSelectedMovie={setSelectedMovie} chieldren={<MovieEditPage></MovieEditPage>} movies={movies ?? []} selectedMovie={selectedMovie ?? {
                 _id: "",
                 name: "ไม่มีชื่อเรื่อง",
                 description: "",
@@ -86,7 +86,7 @@ const MyAppRouter = () => {
                 tailer: ""
             }}></SpotifyLayout>}></Route>
 
-            <Route path="/movie/create" element={<SpotifyLayout myMovieList={myMovieList ?? []} setMymovieList={setMyMovieList} setSelectedMovie={setSelectedMovie} chieldren={< MovieCreatePage></MovieCreatePage>} movies={movies ?? []} selectedMovie={selectedMovie ?? {
+            <Route path="/movie/create" element={<SpotifyLayout isloadig={isLoading} myMovieList={myMovieList ?? []} setMymovieList={setMyMovieList} setSelectedMovie={setSelectedMovie} chieldren={< MovieCreatePage></MovieCreatePage>} movies={movies ?? []} selectedMovie={selectedMovie ?? {
                 _id: "",
                 name: "ไม่มีชื่อเรื่อง",
                 description: "",
