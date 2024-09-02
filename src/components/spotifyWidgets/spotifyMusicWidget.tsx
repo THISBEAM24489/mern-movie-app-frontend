@@ -16,7 +16,11 @@ const SpotifyMusicWidget = ({ movie }: Props) => {
             </div>
         </div>
         <div className="flex flex-col justify-center h-full w-full items-center gap-4">
-          <span className=" text-2xl font-bold">I would be happy to be a part of UNII team if you let me :)</span>
+            <div className="flex flex-row gap-1 justify-center items-center">
+                <span className=" text-2xl font-medium">I would be happy to be a part of</span>
+                <span className=" text-3xl font-bold">UNII</span>
+                <span className=" text-2xl font-medium">team if you let me :)</span>
+            </div>
         </div>
         <div className="flex flex-row h-full w-[30%] justify-center items-center gap-3">
             <Volume2 />
