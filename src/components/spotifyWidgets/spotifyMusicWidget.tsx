@@ -16,19 +16,7 @@ const SpotifyMusicWidget = ({ movie }: Props) => {
             </div>
         </div>
         <div className="flex flex-col justify-center h-full w-full items-center gap-4">
-            <div className="flex flex-row gap-7">
-                <Shuffle />
-                <SkipBack />
-                <Play />
-                <SkipForward />
-                <Repeat2 />
-            </div>
-            <div className="flex flex-row w-[50%] h-1">
-                <div className="flex flex-col w-[60%] bg-green-500 h-1">
-                </div>
-                <div className="flex flex-col w-[40%] bg-white h-1">
-                </div>
-            </div>
+          <span className=" text-2xl font-bold">I would be happy to be a part of UNII team if you let me :)</span>
         </div>
         <div className="flex flex-row h-full w-[30%] justify-center items-center gap-3">
             <Volume2 />
