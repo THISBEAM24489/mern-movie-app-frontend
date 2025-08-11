@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import image1 from "../assets/1.jpg";
 import image2 from "../assets/2.jpg";
 
