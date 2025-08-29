@@ -5,10 +5,10 @@ import mail from "../assets/mail.png";
 
 const VLPage = () => {
   const [offset, setOffset] = useState(0);
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [hearts, setHearts] = useState<
-    { id: number; left: number; size: number }[]
-  >([]);
+  //   const [isOpen, setIsOpen] = useState<boolean>(false);
+  //   const [hearts, setHearts] = useState<
+  //     { id: number; left: number; size: number }[]
+  //   >([]);
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -28,7 +28,7 @@ const VLPage = () => {
       top: document.body.scrollHeight,
       behavior: "smooth",
     });
-    startHeartRain();
+    // startHeartRain();
   };
 
   const scrollToTop = () => {
@@ -38,21 +38,21 @@ const VLPage = () => {
     });
   };
 
-  const startHeartRain = () => {
-    let count = 0;
-    const interval = setInterval(() => {
-      setHearts((prev) => [
-        ...prev,
-        {
-          id: Date.now() + count,
-          left: Math.random() * 100, // random X position %
-          size: Math.random() * 5 + 10, // size 20px - 40px
-        },
-      ]);
-      count++;
-      if (count > 100) clearInterval(interval); // stop after 20 hearts
-    }, 300);
-  };
+  //   const startHeartRain = () => {
+  //     let count = 0;
+  //     const interval = setInterval(() => {
+  //       setHearts((prev) => [
+  //         ...prev,
+  //         {
+  //           id: Date.now() + count,
+  //           left: Math.random() * 100, // random X position %
+  //           size: Math.random() * 5 + 10, // size 20px - 40px
+  //         },
+  //       ]);
+  //       count++;
+  //       if (count > 100) clearInterval(interval); // stop after 20 hearts
+  //     }, 300);
+  //   };
 
   return (
     <div className="relative w-screen h-[200vh] overflow-hidden">
