@@ -11,6 +11,7 @@ import { Movie } from "./types";
 import BanerWidget from "./components/spotifyWidgets/banerWidget";
 import SpotifyMovie from "./components/spotifyWidgets/spotifyMovieTailerWidget";
 import PearPage from "./pages/Pear";
+import VLPage from "./pages/77";
 
 const MyAppRouter = () => {
   const { movieData, isLoading } = useGetMovie();
@@ -227,7 +228,7 @@ const MyAppRouter = () => {
           ></MainAppLayout>
         }
       ></Route>
-      <Route path="/Pear" element={<PearPage></PearPage>}></Route>
+      <Route path="/Pear" element={<VLPage></VLPage>}></Route>
     </Routes>
   );
 };
