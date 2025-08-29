@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 import { Movie } from "./types";
 import BanerWidget from "./components/spotifyWidgets/banerWidget";
 import SpotifyMovie from "./components/spotifyWidgets/spotifyMovieTailerWidget";
-import PearPage from "./pages/Pear";
+// import PearPage from "./pages/Pear";
 import VLPage from "./pages/77";
 
 const MyAppRouter = () => {
