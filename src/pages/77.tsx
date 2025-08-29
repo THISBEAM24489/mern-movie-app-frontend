@@ -78,10 +78,13 @@ const VLPage = () => {
       {/* Overlay text */}
       <div className="absolute flex flex-col w-full bottom-1/3 pb-20 z-10 items-center justify-center">
         <span className="text-2xl font-bold text-black text-center">
+          Happy Qixi Festial !!
+        </span>
+        <span className="text-2xl font-bold text-black text-center">
           七夕快乐！没对象也要快乐！
         </span>
 
-        <span>คนอะไรเล่นเกมอยู่ดีๆก็งอน</span>
+        <span className="pt-3">คนอะไรเล่นเกมอยู่ดีๆก็งอน</span>
       </div>
 
       <div className="absolute flex flex-col w-full bottom-80 right-[130px] z-10 items-center justify-center ">
