@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import image from "../assets/77day.png";
 import bg from "../assets/bg.jpeg";
 import mail from "../assets/mail.png";
+import monkey from "../assets/monkey.png";
+import otter from "../assets/Otter.png";
 
 const VLPage = () => {
   const [offset, setOffset] = useState(0);
@@ -74,35 +76,38 @@ const VLPage = () => {
       </div>
 
       {/* Overlay text */}
-      <div className="absolute flex flex-col w-full bottom-1/3 z-10 items-center justify-center">
+      <div className="absolute flex flex-col w-full bottom-1/3 pb-20 z-10 items-center justify-center">
         <span className="text-2xl font-bold text-black text-center">
           七夕快乐！没对象也要快乐！
         </span>
-        <span>test</span>
+
+        <span>คนอะไรเล่นเกมอยู่ดีๆก็งอน</span>
       </div>
-      <div className="absolute flex flex-col w-full bottom-1/2 z-10 items-center justify-center ">
-        {/* {hearts.map((heart) => (
-          <div
-            key={heart.id}
-            className="absolute text-red-500 animate-fall"
-            style={{
-              left: `${heart.left}%`,
-              fontSize: `${heart.size}px`,
-              top: "-40px",
-            }}
-          >
-            🌸
-          </div>
-        ))} */}
+
+      <div className="absolute flex flex-col w-full bottom-80 right-[130px] z-10 items-center justify-center ">
+        <img
+          onClick={scrollToTop}
+          src={otter}
+          alt="Mail Icon"
+          className=" object-bottom w-28 h-28 animate-float   cursor-pointer"
+        />
+      </div>
+      <div className="absolute flex flex-col w-full bottom-52 left-[140px] z-10 items-center justify-center ">
+        <img
+          onClick={scrollToTop}
+          src={monkey}
+          alt="Mail Icon"
+          className=" object-bottom w-24 h-24 animate-float2  cursor-pointer"
+        />
       </div>
 
       {/* Overlay text (clickable to scroll back to top) */}
-      <div
+      {/* <div
         onClick={scrollToTop}
         className="absolute bottom-5 right-5 bg-black/50 text-white p-2 rounded-lg cursor-pointer"
       >
-        Overlay Text
-      </div>
+        <span>เก็บจดหมาย</span>
+      </div> */}
 
       {/* Scroll button (centered at top) */}
       <div className="absolute top-28 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center">
@@ -122,8 +127,16 @@ const VLPage = () => {
           50% { transform: translateY(-50px); }
           100% { transform: translateY(0px); }
         }
+           @keyframes float2 {
+          0% { transform: translateY(0px); }
+          50% { transform: translateY(-60px); }
+          100% { transform: translateY(0px); }
+        }
         .animate-float {
           animation: float 3s ease-in-out infinite;
+        }
+          .animate-float2 {
+          animation: float 2.5s ease-in-out infinite;
         }
 
         @keyframes fall {
